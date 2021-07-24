@@ -44,14 +44,14 @@ class LogAspect {
     @Around("@annotation(applications_spring_kt.aop.aspects.annotation.Log)")
     fun log(proceedingJoinPoint: ProceedingJoinPoint): Any? {
         val t1 = System.currentTimeMillis();
-        LOG.info("[ Log Aspect ] <<<< Before | ${proceedingJoinPoint.signature}");
+        LOG.info("${String(Character.toChars(0x1F4E9))} [ Log Aspect ] <<<< Before | ${proceedingJoinPoint.signature}");
 
         // do method of metier
         val result = proceedingJoinPoint.proceed();
 
-        LOG.info("[ Log Aspect ] >>>> After | ${proceedingJoinPoint.signature}");
+        LOG.info("${String(Character.toChars(0x1F4E9))} [ Log Aspect ] >>>> After | ${proceedingJoinPoint.signature}");
         val t2 = System.currentTimeMillis();
-        LOG.info("[ Log Aspect ] #duration: ${t2 - t1}");
+        LOG.info("${String(Character.toChars(0x1F4E9))} [ Log Aspect ] #duration: ${t2 - t1}");
 
         return result;
     }
