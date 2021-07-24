@@ -32,7 +32,8 @@ sourceSets.main {
 application {
 	mainClass.set("javafx_multiple.MyLauncher")
 }
-// module
+
+// for a module
 //application {
 //	mainModule.set("org.gradle.sample.app") // name defined in module-info.java
 //	mainClass.set("org.gradle.sample.Main")
@@ -46,19 +47,22 @@ javafx {
 val junitJupiterVersion  = "5.6.1"
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-	implementation("org.springframework.boot:spring-boot-starter-data-rest")
-	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
-	implementation("org.springframework.boot:spring-boot-starter-web")
-	implementation("org.springframework.boot:spring-boot-starter-webflux")
-	implementation("org.springframework.boot:spring-boot-starter-websocket")
-	implementation("org.springframework.session:spring-session-core")
-	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+	developmentOnly("org.springframework.boot:spring-boot-devtools")
+	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("org.springframework.session:spring-session-core")
 	runtimeOnly("com.h2database:h2")
+
+//	// commented for a soft startup
+	//implementation("org.springframework.boot:spring-boot-starter-data-rest")
+//	implementation("org.springframework.boot:spring-boot-starter-webflux")
+//	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+//	implementation("org.springframework.boot:spring-boot-starter-websocket")
 //	runtimeOnly("mysql:mysql-connector-java")
-	compileOnly("org.projectlombok:lombok")
-	annotationProcessor("org.projectlombok:lombok")
+//	compileOnly("org.projectlombok:lombok")
+//	annotationProcessor("org.projectlombok:lombok")
+	//
 	implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 
@@ -121,13 +125,6 @@ implementation 'de.jensd:fontawesomefx-commons:11.0'
 	implementation("de.jensd:fontawesomefx-materialstackicons:2.1-5-9.1.2")
 	implementation("de.jensd:fontawesomefx-octicons:4.3.0-9.1.2")
 	implementation("de.jensd:fontawesomefx-weathericons:2.0.10-9.1.2")
-
-// ================== SPRING
-//    implementation('org.springframework.boot:spring-boot-starter')
-//    implementation("org.springframework.boot:spring-boot-starter-data-rest")
-//    implementation("org.springframework.boot:spring-boot-starter-web")
-//    testImplementation("org.springframework.boot:spring-boot-starter-test")
-//    testImplementation("io.projectreactor:reactor-test")
 
 //    // https://mvnrepository.com/artifact/commons-logging/commons-logging
 //    compile group: 'commons-logging', name: 'commons-logging', version: '1.2'

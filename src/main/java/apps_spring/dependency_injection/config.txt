@@ -1,0 +1,4 @@
+apps_spring.dependency_injection.dao.impl.DaoImpl
+apps_spring.dependency_injection.metier.impl.MetierImpl
+
+apps_spring.dependency_injection.ext.impl.DaoImplV2
