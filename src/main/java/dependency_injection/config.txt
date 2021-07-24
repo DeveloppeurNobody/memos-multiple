@@ -1,0 +1,4 @@
+dependency_injection.dao.impl.DaoImpl
+dependency_injection.metier.impl.MetierImpl
+
+dependency_injection.ext.impl.DaoImplV2
