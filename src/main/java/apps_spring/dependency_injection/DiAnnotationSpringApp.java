@@ -24,9 +24,7 @@ public class DiAnnotationSpringApp implements CommandLineRunner {
 
 
 	public void startWithAnnotation() {
-		System.out.println("startWithAnnotation");
-
-		// put package scan from java to service or dao [ src/main/java/dependecy_injection/dao ]
+		// put package to scan from java to 'service' or 'dao' [ src/main/java/dependecy_injection/dao ]
 		// ApplicationContext ctx = new AnnotationConfigApplicationContext("apps_spring.dependency_injection.dao", "apps_spring.dependency_injection.metier");
 		ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
 		IMetier metier = ctx.getBean(IMetier.class);
